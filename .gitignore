@@ -1,0 +1,5 @@
+# Non-site files
+*.py
+*.bat
+.vscode/
+node_modules/
