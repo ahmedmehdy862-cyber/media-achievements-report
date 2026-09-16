@@ -303,11 +303,11 @@ function initCharts() {
     createChart('fb-pagevisits',  [1500, 4500, 5000, 4000, 5500, 4500, 4000, 4300, 3000, 3000, 3000], blue);
     createChart('fb-follows',     [100, 400, 500, 350, 500, 350, 300, 300, 200, 100, 100], blue);
 
-    // Instagram Charts
-    createChart('ig-reach',        [10, 40, 60, 50, 80, 60, 60, 70, 60, 70, 49], orange);
-    createChart('ig-views',        [50, 200, 300, 250, 350, 300, 300, 350, 300, 300, 186], orange);
-    createChart('ig-interactions', [3, 12, 18, 14, 20, 16, 15, 17, 14, 14, 10], orange);
-    createChart('ig-profile',      [2, 8, 12, 9, 14, 10, 9, 10, 8, 6, 4], orange);
-    createChart('ig-follows',      [2, 5, 7, 5, 7, 5, 5, 5, 4, 3, 2], orange);
+    // Instagram Charts — data based on Meta Insights screenshots
+    createChart('ig-reach',        [5, 15, 20, 15, 25, 20, 30, 50, 200, 180, 149], orange);
+    createChart('ig-views',        [500, 1200, 1000, 1500, 1500, 1000, 1500, 6000, 4500, 4000, 3600], orange);
+    createChart('ig-interactions', [2, 5, 8, 6, 10, 8, 10, 15, 25, 12, 7], orange);
+    createChart('ig-profile',      [1, 3, 5, 4, 8, 6, 8, 15, 20, 14, 8], orange);
+    createChart('ig-follows',      [1, 2, 3, 2, 4, 3, 4, 6, 8, 12, 5], orange);
     createChart('ig-clicks',       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], orange, 'rgba(251, 174, 66, 0.08)');
 }
