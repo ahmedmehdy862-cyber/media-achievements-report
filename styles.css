@@ -1849,6 +1849,117 @@ a { color: inherit; text-decoration: none; }
     margin-bottom: 8px;
 }
 
+/* Charts Section */
+.charts-section {
+    margin-top: 24px;
+}
+
+.charts-subtitle {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    margin-bottom: 24px;
+}
+
+.charts-platform {
+    margin-bottom: 32px;
+}
+
+.charts-platform-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--blue);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.chart-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--gray-200);
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.chart-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.chart-card:hover {
+    border-color: var(--blue);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.chart-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.chart-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.chart-card-title {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--gray-600);
+}
+
+.chart-card-total {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--blue);
+}
+
+.chart-growth {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+.chart-growth.positive {
+    color: var(--blue);
+    background: var(--blue-subtle);
+}
+
+.chart-growth.neutral {
+    color: var(--gray-500);
+    background: var(--gray-100);
+}
+
+.chart-container {
+    position: relative;
+    height: 180px;
+}
+
+@media (max-width: 768px) {
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Evidence */
 .evidence-section {
     margin-top: 32px;
