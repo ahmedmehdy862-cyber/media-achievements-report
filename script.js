@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initCounters();
     initBarFills();
     initActiveNav();
+    initCharts();
 });
 
 /* ============================================
@@ -207,4 +208,106 @@ function initActiveNav() {
 
     window.addEventListener('scroll', updateActiveLink, { passive: true });
     updateActiveLink();
+}
+
+/* ============================================
+   Interactive Charts (Chart.js)
+   ============================================ */
+function initCharts() {
+    const months = ['نوف', 'ديس', 'يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر'];
+
+    const blue = '#014976';
+    const blueLight = 'rgba(1, 73, 118, 0.12)';
+    const orange = '#FBAE42';
+
+    function createChart(id, data, color, fillColor) {
+        var ctx = document.getElementById(id);
+        if (!ctx) return;
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: months,
+                datasets: [{
+                    data: data,
+                    borderColor: color || blue,
+                    backgroundColor: fillColor || blueLight,
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 0,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: color || blue,
+                    pointHoverBorderColor: '#fff',
+                    pointHoverBorderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: 'rgba(1, 73, 118, 0.9)',
+                        titleFont: { family: "'Noto Kufi Arabic', sans-serif", size: 12 },
+                        bodyFont: { family: "'Noto Kufi Arabic', sans-serif", size: 13, weight: '700' },
+                        padding: 10,
+                        cornerRadius: 8,
+                        displayColors: false,
+                        callbacks: {
+                            label: function(ctx) {
+                                var val = ctx.parsed.y;
+                                if (val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
+                                if (val >= 1000) return (val / 1000).toFixed(1) + 'K';
+                                return val.toLocaleString('en-US');
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                            font: { family: "'Noto Kufi Arabic', sans-serif", size: 10 },
+                            color: '#999',
+                            maxRotation: 0
+                        }
+                    },
+                    y: {
+                        grid: { color: 'rgba(0,0,0,0.04)', drawBorder: false },
+                        ticks: {
+                            font: { family: "'Noto Kufi Arabic', sans-serif", size: 10 },
+                            color: '#999',
+                            maxTicksLimit: 5,
+                            callback: function(val) {
+                                if (val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
+                                if (val >= 1000) return (val / 1000).toFixed(0) + 'K';
+                                return val;
+                            }
+                        },
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+    // Facebook Charts — data based on Meta Insights screenshots
+    createChart('fb-views',       [30000, 110000, 130000, 100000, 120000, 110000, 100000, 130000, 100000, 90000, 70000], blue);
+    createChart('fb-viewers',     [8000, 18000, 20000, 16000, 22000, 18000, 17000, 16000, 12000, 8000, 4500], blue);
+    createChart('fb-interactions',[800, 3500, 4200, 3000, 4500, 3500, 3200, 3500, 2500, 2500, 2300], blue);
+    createChart('fb-clicks',      [50, 200, 250, 180, 280, 200, 180, 170, 120, 100, 70], blue);
+    createChart('fb-pagevisits',  [1500, 4500, 5000, 4000, 5500, 4500, 4000, 4300, 3000, 3000, 3000], blue);
+    createChart('fb-follows',     [100, 400, 500, 350, 500, 350, 300, 300, 200, 100, 100], blue);
+
+    // Instagram Charts
+    createChart('ig-reach',        [10, 40, 60, 50, 80, 60, 60, 70, 60, 70, 49], orange);
+    createChart('ig-views',        [50, 200, 300, 250, 350, 300, 300, 350, 300, 300, 186], orange);
+    createChart('ig-interactions', [3, 12, 18, 14, 20, 16, 15, 17, 14, 14, 10], orange);
+    createChart('ig-profile',      [2, 8, 12, 9, 14, 10, 9, 10, 8, 6, 4], orange);
+    createChart('ig-follows',      [2, 5, 7, 5, 7, 5, 5, 5, 4, 3, 2], orange);
+    createChart('ig-clicks',       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], orange, 'rgba(251, 174, 66, 0.08)');
 }
