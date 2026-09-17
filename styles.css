@@ -253,9 +253,10 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-logo {
+    display: block;
     width: 100px;
     height: auto;
-    margin-bottom: 12px;
+    margin: 0 auto 12px;
 }
 
 .hero-author {
@@ -1986,6 +1987,65 @@ a { color: inherit; text-decoration: none; }
 .chart-container {
     position: relative;
     height: 180px;
+}
+
+.impact-stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.impact-mini-stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+}
+
+.mini-label {
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+.mini-value {
+    font-weight: 700;
+    color: var(--gray-800);
+}
+
+.mini-value small {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.mini-value small.positive {
+    color: var(--blue);
+}
+
+.top-content-inline {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: var(--gray-50);
+    border-radius: 10px;
+    border: 1px solid var(--gray-200);
+}
+
+.top-content-inline h4 {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 8px;
+}
+
+.top-content-inline p {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.7;
 }
 
 @media (max-width: 768px) {
