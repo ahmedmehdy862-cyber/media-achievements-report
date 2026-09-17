@@ -255,7 +255,15 @@ a { color: inherit; text-decoration: none; }
 .hero-logo {
     width: 100px;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+}
+
+.hero-author {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 16px;
+    font-weight: 600;
 }
 
 .hero-transition-badge {
