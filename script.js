@@ -216,8 +216,8 @@ function initActiveNav() {
 function initCharts() {
     const months = ['نوف', 'ديس', 'يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر'];
 
-    const blue = '#014976';
-    const blueLight = 'rgba(1, 73, 118, 0.12)';
+    const blue = '#225F84';
+    const blueLight = 'rgba(34, 95, 132, 0.12)';
     const orange = '#FBAE42';
 
     function createChart(id, data, color, fillColor) {
