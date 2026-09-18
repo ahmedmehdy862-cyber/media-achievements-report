@@ -2501,7 +2501,7 @@ a { color: inherit; text-decoration: none; }
     }
 
     .transition-arrow {
-        transform: rotate(90deg);
+        transform: rotate(270deg);
     }
 
     .transition-arrow svg {
