@@ -267,6 +267,39 @@ a { color: inherit; text-decoration: none; }
     font-weight: 600;
 }
 
+.hero-transition-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 16px 24px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(4px);
+}
+
+.transition-logo-left {
+    height: 50px;
+    width: auto;
+    opacity: 0.85;
+}
+
+.transition-logo-right {
+    height: 50px;
+    width: auto;
+}
+
+.transition-arrow {
+    flex-shrink: 0;
+}
+
+.transition-arrow svg {
+    width: 50px;
+    height: 20px;
+}
+
 .hero-transition-badge {
     display: inline-block;
     font-family: var(--font-heading);
