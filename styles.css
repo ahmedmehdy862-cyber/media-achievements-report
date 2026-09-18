@@ -1,6 +1,6 @@
 /* ============================================
    أسر صناع الحياة — تقرير إنجازات الميديا
-   Brand Colors: #014976, #FBAE42, #FFFFFF
+    Brand Colors: #225F84, #FBAE42, #FFFFFF
    ============================================ */
 
 /*
@@ -48,7 +48,7 @@
 /* CSS Custom Properties */
 /*
    الهوية المعتمدة (إلزامية):
-   - #014976  (Primary Blue)
+   - #225F84  (Primary Blue)
    - #FBAE42  (Accent Orange)
    - #FFFFFF  (White)
 
@@ -56,10 +56,10 @@
    كل القيم المساعدة أدناه هي درجات شفافية ONLY من الألوان الثلاثة.
 */
 :root {
-    --blue: #014976;
-    --blue-dark: rgba(1, 73, 118, 0.85);
-    --blue-light: rgba(1, 73, 118, 0.55);
-    --blue-subtle: rgba(1, 73, 118, 0.08);
+    --blue: #225F84;
+    --blue-dark: rgba(34, 95, 132, 0.85);
+    --blue-light: rgba(34, 95, 132, 0.55);
+    --blue-subtle: rgba(34, 95, 132, 0.08);
     --orange: #FBAE42;
     --orange-dark: rgba(251, 174, 66, 0.9);
     --orange-muted: rgba(251, 174, 66, 0.75);
