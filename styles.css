@@ -1601,7 +1601,7 @@ a { color: inherit; text-decoration: none; }
    ============================================ */
 .system-cycles {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 16px;
     margin-top: 20px;
 }
