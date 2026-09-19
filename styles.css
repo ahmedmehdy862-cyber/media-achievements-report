@@ -2667,6 +2667,21 @@ a { color: inherit; text-decoration: none; }
     color: var(--orange) !important;
 }
 
+.final-identity {
+    margin-top: 12px;
+}
+
+.final-identity a {
+    color: var(--orange);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: opacity var(--transition);
+}
+
+.final-identity a:hover {
+    opacity: 0.75;
+}
+
 .final-author {
     font-size: 0.9rem !important;
     color: rgba(255,255,255,0.6) !important;
