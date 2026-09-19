@@ -1946,6 +1946,57 @@ a { color: inherit; text-decoration: none; }
     gap: 16px;
 }
 
+/* Platform tabs (Facebook / Instagram) */
+.platform-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.tab-btn {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 10px 32px;
+    border-radius: 100px;
+    border: 1px solid var(--gray-200);
+    background: var(--white);
+    color: var(--blue);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-btn.active {
+    background: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
+
+/* Back to top */
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 100;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
 .chart-card {
     background: var(--white);
     border-radius: 12px;
