@@ -603,70 +603,16 @@
                 <div class="impact-big-sub">100% Organic</div>
             </div>
 
+            <!-- Platform Tabs -->
+            <div class="platform-tabs" data-animate>
+                <button class="tab-btn active" data-platform="fb">Facebook</button>
+                <button class="tab-btn" data-platform="ig">Instagram</button>
+            </div>
+
             <!-- Facebook Section -->
-            <div class="impact-platform">
+            <div class="impact-platform" data-platform-panel="fb">
                 <h3 class="subsection-title"><span class="platform-icon fb">f</span> Facebook</h3>
-                <div class="charts-grid">
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">المشاهدات</span>
-                                <span class="chart-card-total">1,129,181</span>
-                            </div>
-                            <span class="chart-growth positive">↑ 417.6%</span>
-                        </div>
-                        <div class="chart-container"><canvas id="fb-views"></canvas></div>
-                    </div>
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">زيارات الصفحة</span>
-                                <span class="chart-card-total">38.3K</span>
-                            </div>
-                            <span class="chart-growth positive">↑ 568.3%</span>
-                        </div>
-                        <div class="chart-container"><canvas id="fb-pagevisits"></canvas></div>
-                    </div>
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">المشاهدون</span>
-                                <span class="chart-card-total">159,530</span>
-                            </div>
-                        </div>
-                        <div class="chart-container"><canvas id="fb-viewers"></canvas></div>
-                    </div>
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">التفاعلات</span>
-                                <span class="chart-card-total">30K</span>
-                            </div>
-                            <span class="chart-growth positive">↑ 363.1%</span>
-                        </div>
-                        <div class="chart-container"><canvas id="fb-interactions"></canvas></div>
-                    </div>
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">النقرات على الروابط</span>
-                                <span class="chart-card-total">1.8K</span>
-                            </div>
-                            <span class="chart-growth positive">↑ 110.3%</span>
-                        </div>
-                        <div class="chart-container"><canvas id="fb-clicks"></canvas></div>
-                    </div>
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">المتابعون الجدد</span>
-                                <span class="chart-card-total">3.2K</span>
-                            </div>
-                            <span class="chart-growth positive">↑ 417.6%</span>
-                        </div>
-                        <div class="chart-container"><canvas id="fb-follows"></canvas></div>
-                    </div>
-                </div>
+                <div class="charts-grid" id="fb-charts"></div>
                 <div class="impact-stats-row">
                     <div class="impact-mini-stat"><span class="mini-label">3-second Views</span><span class="mini-value">10.7K <small class="positive">+61.3%</small></span></div>
                     <div class="impact-mini-stat"><span class="mini-label">Watch Time</span><span class="mini-value">2d 17h</span></div>
@@ -683,70 +629,9 @@
                 </div>
             </div>
 
-            <div class="impact-platform">
+            <div class="impact-platform" data-platform-panel="ig" hidden>
                 <h3 class="subsection-title"><span class="platform-icon ig">IG</span> Instagram</h3>
-                <div class="charts-grid">
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">المشاهدات</span>
-                                <span class="chart-card-total">26.3K</span>
-                            </div>
-                            <span class="chart-growth positive">↑ 1.8%</span>
-                        </div>
-                        <div class="chart-container"><canvas id="ig-views"></canvas></div>
-                    </div>
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">الوصول</span>
-                                <span class="chart-card-total">709</span>
-                            </div>
-                            <span class="chart-growth positive">↑ 439.8%</span>
-                        </div>
-                        <div class="chart-container"><canvas id="ig-reach"></canvas></div>
-                    </div>
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">التفاعلات</span>
-                                <span class="chart-card-total">108</span>
-                            </div>
-                            <span class="chart-growth positive">↑ 2.5%</span>
-                        </div>
-                        <div class="chart-container"><canvas id="ig-interactions"></canvas></div>
-                    </div>
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">زيارات الملف الشخصي</span>
-                                <span class="chart-card-total">92</span>
-                            </div>
-                            <span class="chart-growth positive">↑ 187.5%</span>
-                        </div>
-                        <div class="chart-container"><canvas id="ig-profile"></canvas></div>
-                    </div>
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">المتابعون الجدد</span>
-                                <span class="chart-card-total">50</span>
-                            </div>
-                            <span class="chart-growth positive">↑ 1.9%</span>
-                        </div>
-                        <div class="chart-container"><canvas id="ig-follows"></canvas></div>
-                    </div>
-                    <div class="chart-card" data-animate>
-                        <div class="chart-card-header">
-                            <div class="chart-card-info">
-                                <span class="chart-card-title">النقرات على الروابط</span>
-                                <span class="chart-card-total">0</span>
-                            </div>
-                            <span class="chart-growth neutral">—</span>
-                        </div>
-                        <div class="chart-container"><canvas id="ig-clicks"></canvas></div>
-                    </div>
-                </div>
+                <div class="charts-grid" id="ig-charts"></div>
                 <div class="impact-stats-row">
                     <div class="impact-mini-stat"><span class="mini-label">Total Views</span><span class="mini-value">2,886</span></div>
                     <div class="impact-mini-stat"><span class="mini-label">Organic</span><span class="mini-value">100%</span></div>
@@ -930,6 +815,8 @@
             </div>
         </div>
     </section>
+
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">↑</button>
 
     <script src="script.js"></script>
 </body>
