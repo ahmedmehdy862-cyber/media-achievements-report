@@ -982,8 +982,7 @@ a { color: inherit; text-decoration: none; }
     color: var(--gray-500);
 }
 
-.uni-activations,
-.uni-impact {
+.uni-activations {
     margin-bottom: 20px;
 }
 
@@ -1044,6 +1043,25 @@ a { color: inherit; text-decoration: none; }
     font-weight: 600;
     font-size: 0.95rem;
     color: var(--gray-700);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.suspended-reason {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--orange-dark);
+    background: rgba(251, 174, 66, 0.15);
+    padding: 4px 12px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+.expansion-suspended {
+    margin-bottom: 20px;
 }
 
 /* ============================================
@@ -1503,11 +1521,6 @@ a { color: inherit; text-decoration: none; }
 .launch-badge.transferred {
     background: rgba(1, 73, 118, 0.1);
     color: var(--blue);
-}
-
-.launch-badge.suspended {
-    background: rgba(251, 174, 66, 0.12);
-    color: var(--orange-dark);
 }
 
 .launch-badge.active {
