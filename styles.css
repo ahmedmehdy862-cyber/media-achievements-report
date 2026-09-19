@@ -1691,6 +1691,42 @@ a { color: inherit; text-decoration: none; }
     color: var(--blue);
 }
 
+.review-approval {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 12px;
+    background: var(--blue-subtle);
+    border: 1px solid rgba(1, 73, 118, 0.35);
+}
+
+.review-approval-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.review-approval p {
+    font-size: 0.92rem;
+    color: var(--gray-800);
+    line-height: 1.7;
+}
+
+.review-approval strong {
+    color: var(--blue);
+}
+
 .cycle-warning {
     display: flex;
     align-items: flex-start;
